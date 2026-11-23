@@ -1,0 +1,1119 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alumideal Esquadrias de Alumínio | Bragança Paulista</title>
+<meta name="description" content="Esquadrias de alumínio sob medida em Bragança Paulista: portas pivotantes, portas e janelas de correr, fachadas de vidro, guarda-corpos, coberturas e brises. Peça seu orçamento pelo WhatsApp.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#121315">
+<link rel="icon" href="favicon.png" type="image/png">
+
+<meta property="og:url" content="https://alumideal-previa.netlify.app/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Alumideal Esquadrias de Alumínio">
+<meta property="og:description" content="Esquadrias de alumínio sob medida, com fábrica em Bragança Paulista. Orçamento pelo WhatsApp.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..600;1,8..60,300..600&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   ALUMIDEAL · landing page
+   Cores e fontes: mexa só no bloco :root
+   ========================================================= */
+:root {
+  /* Cores tiradas dos acabamentos de esquadria */
+  --preto: #121315;        /* alumínio anodizado preto: texto, molduras, seções escuras */
+  --grafite: #2a2d31;      /* moldura sobre fundo escuro, texto secundário */
+  --aluminio: #8e9399;     /* alumínio natural: textos de apoio */
+  --linha: #c9c9c4;        /* fios no fundo claro */
+  --linha-esc: #2d3034;    /* fios no fundo escuro */
+  --concreto: #e5e5e1;     /* fundo claro principal */
+  --gesso: #f2f2ef;        /* texto claro no escuro, fundo das perguntas */
+  --bronze: #8d6a4b;       /* bronze anodizado: rótulos e detalhes */
+  --bronze-claro: #c39a74; /* bronze sobre fundo escuro */
+  --zap: #1f9d55;          /* só no botão flutuante */
+  --branco: #ffffff;       /* seções brancas de contraste sobre o fundo preto */
+
+  --f-titulo: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --f-texto: "Source Serif 4", Georgia, serif;
+
+  --moldura: 10px;         /* espessura do perfil em volta das fotos */
+  --montante: 8px;         /* espessura das divisões entre fotos */
+  --ease: cubic-bezier(.7, 0, .2, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--preto);
+  color: var(--gesso);
+  font-family: var(--f-texto);
+  font-size: 18px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+h1, h2, h3, p, ul, ol, dl, dd, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--bronze); outline-offset: 3px; }
+
+.wrap { width: 100%; max-width: 1440px; margin: 0 auto; padding-inline: clamp(16px, 4vw, 56px); }
+
+/* ---------- Tipografia ---------- */
+.rotulo {
+  font-family: var(--f-titulo);
+  font-stretch: 78%;
+  font-weight: 600;
+  font-size: 12.5px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--bronze);
+}
+h1, h2 {
+  font-family: var(--f-titulo);
+  font-stretch: 125%;
+  font-weight: 560;
+  letter-spacing: -.028em;
+  line-height: .98;
+}
+h2 { font-size: clamp(30px, 4.2vw, 62px); margin-top: 16px; }
+h3 { font-family: var(--f-titulo); font-weight: 600; font-size: 21px; line-height: 1.2; letter-spacing: -.01em; }
+
+/* ---------- Botões ---------- */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 16px 22px;
+  background: var(--preto); color: var(--gesso);
+  font-family: var(--f-titulo); font-weight: 600; font-size: 15px; letter-spacing: .005em;
+  text-decoration: none; border-radius: 2px; border: 0; cursor: pointer;
+  transition: background-color .25s;
+}
+.btn:hover { background: var(--bronze); }
+.btn-claro { background: var(--gesso); color: var(--preto); }
+.btn-claro:hover { background: var(--bronze-claro); }
+.btn-grande { padding: 20px 28px; font-size: 16px; }
+.ic-zap { width: 18px; height: 18px; flex: none; }
+
+.link-linha {
+  font-family: var(--f-titulo); font-weight: 500; font-size: 15px;
+  text-decoration: none; padding: 4px 0; border: 0; background: none; cursor: pointer;
+  border-bottom: 1px solid currentColor;
+  transition: color .2s, border-color .2s;
+}
+.link-linha:hover { color: var(--bronze); }
+
+/* ---------- Topo ---------- */
+.topo {
+  position: fixed; inset: 0 0 auto; z-index: 50;
+  transition: background-color .3s, box-shadow .3s;
+}
+.topo.rolou { background: var(--preto); box-shadow: 0 1px 0 var(--linha-esc); }
+.topo-in { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 88px; }
+.marca { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+.simbolo { width: 54px; height: 54px; flex: none; }
+.marca-txt { display: flex; flex-direction: column; gap: 6px; }
+.marca-nome {
+  font-family: var(--f-titulo); font-stretch: 125%; font-weight: 640;
+  font-size: 20px; letter-spacing: .07em; text-transform: uppercase; line-height: 1;
+}
+.marca-sub {
+  font-family: var(--f-titulo); font-stretch: 78%; font-weight: 500;
+  font-size: 11.5px; letter-spacing: .2em; text-transform: uppercase; line-height: 1; color: var(--aluminio);
+}
+/* Botões claros sobre o fundo preto (topo e abertura) */
+.topo .btn, .hero .btn { background: var(--gesso); color: var(--preto); }
+.topo .btn:hover, .hero .btn:hover { background: var(--bronze-claro); }
+.hero .link-linha:hover { color: var(--bronze-claro); }
+.menu { display: flex; gap: clamp(20px, 2.6vw, 40px); margin-left: auto; }
+.menu a {
+  font-family: var(--f-titulo); font-weight: 500; font-size: 15px; text-decoration: none;
+  background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;
+  padding-bottom: 3px; transition: background-size .3s;
+}
+.menu a:hover { background-size: 100% 1px; }
+.btn-topo { padding: 12px 18px; }
+.so-mob { display: none; }
+
+/* ---------- Hero ---------- */
+.hero { padding-top: clamp(120px, 15vh, 148px); }
+.hero .rotulo { color: var(--bronze-claro); }
+.hero-topo {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 400px);
+  gap: clamp(28px, 4vw, 64px); align-items: end;
+  margin-bottom: clamp(28px, 4vw, 48px);
+}
+h1 { font-size: clamp(40px, 5.3vw, 86px); margin-top: 20px; }
+h1 em {
+  font-family: var(--f-texto); font-style: italic; font-weight: 380; font-stretch: normal;
+  font-size: 1.14em; letter-spacing: -.02em; line-height: .9;
+  color: var(--bronze-claro);
+}
+.hero-lado p { font-size: 18px; color: #c3c6ca; }
+.acoes { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 26px; margin-top: 26px; }
+
+/* O caixilho: fotos como folhas de uma esquadria preta */
+.caixilho {
+  display: flex;
+  height: clamp(360px, 64vh, 780px);
+  border: var(--moldura) solid var(--grafite);
+  background: var(--grafite);
+  overflow: hidden;
+  border-radius: 2px;
+}
+.folha {
+  position: relative; flex: 1 1 0; min-width: 0; overflow: hidden;
+  border-left: var(--montante) solid var(--grafite);
+  z-index: calc(10 - var(--i));
+  background: var(--grafite);
+  transition: flex-grow .9s cubic-bezier(.2, .7, .1, 1);
+}
+.folha:first-child { border-left: 0; }
+.folha img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.folha figcaption {
+  position: absolute; left: 0; bottom: 0;
+  padding: 9px 14px 8px;
+  background: var(--preto); color: var(--gesso);
+  font-family: var(--f-titulo); font-stretch: 78%; font-weight: 600;
+  font-size: 12px; letter-spacing: .14em; text-transform: uppercase; white-space: nowrap;
+  opacity: 0; transform: translateY(100%);
+  transition: opacity .35s, transform .45s var(--ease);
+}
+@media (hover: hover) and (min-width: 760px) {
+  .folha:hover { flex-grow: 1.75; }
+  .folha:hover figcaption { opacity: 1; transform: none; }
+}
+/* Abertura: as folhas correm para o lugar, como numa porta de correr */
+.caixilho.entrando .folha { transform: translateX(calc(var(--i) * -100% - var(--i) * var(--montante))); }
+.caixilho.entrando.aberto .folha {
+  transform: none;
+  transition: transform 1.3s var(--ease) calc(.15s + var(--i) * .08s), flex-grow .9s cubic-bezier(.2, .7, .1, 1);
+}
+
+.fatos {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid var(--linha-esc);
+}
+.fatos li {
+  padding: 20px 20px 20px 0;
+  font-family: var(--f-titulo); font-weight: 500; font-size: 15px; line-height: 1.35;
+}
+.fatos li + li { padding-left: 20px; border-left: 1px solid var(--linha-esc); }
+
+/* ---------- Seções ---------- */
+.secao { padding-block: clamp(80px, 10vw, 150px); }
+/* Seções brancas de contraste: obras, empresa e chamada final */
+.obras, .empresa, .final { background: var(--branco); color: var(--preto); }
+.cab {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end;
+  gap: 24px 48px; margin-bottom: clamp(32px, 4vw, 52px);
+}
+.cab-txt { max-width: 44ch; margin-top: 18px; color: #3d4044; }
+
+/* ---------- Obras ---------- */
+.filtros { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; max-width: 560px; }
+.filtro {
+  padding: 9px 14px; border: 1px solid #b9bab5; background: transparent; border-radius: 2px;
+  font-family: var(--f-titulo); font-weight: 500; font-size: 14px; cursor: pointer;
+  transition: background-color .2s, color .2s, border-color .2s;
+}
+.filtro:hover { border-color: var(--preto); }
+.filtro.on { background: var(--preto); border-color: var(--preto); color: var(--gesso); }
+
+.muro {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-auto-rows: clamp(46px, 6.4vw, 92px);
+  grid-auto-flow: dense;
+  gap: var(--montante);
+  padding: var(--montante);
+  background: var(--preto);
+  border-radius: 2px;
+}
+.obra { position: relative; overflow: hidden; background: #1d1f22; }
+.obra.L { grid-column: span 8; grid-row: span 6; }
+.obra.T { grid-column: span 4; grid-row: span 6; }
+.obra.M { grid-column: span 6; grid-row: span 4; }
+.obra.S { grid-column: span 3; grid-row: span 4; }
+.obra.extra { display: none; }
+.muro.tudo .obra.extra { display: block; }
+
+.muro.filtrando .obra { display: block; grid-column: span 4; grid-row: span 5; }
+.muro.filtrando .obra.esc { display: none; }
+
+.obra button { display: block; width: 100%; height: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; }
+.obra img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 1.4s cubic-bezier(.2, .7, .1, 1), opacity .6s;
+}
+.obra figcaption {
+  position: absolute; left: 0; bottom: 0; pointer-events: none;
+  padding: 9px 14px 8px; background: var(--preto); color: var(--gesso);
+  font-family: var(--f-titulo); font-stretch: 78%; font-weight: 600;
+  font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+  transform: translateY(101%); transition: transform .45s var(--ease);
+}
+@media (hover: hover) {
+  .obra:hover img { transform: scale(1.035); }
+  .obra:hover figcaption { transform: none; }
+}
+.obra:focus-within figcaption { transform: none; }
+.mais { display: flex; justify-content: center; margin-top: 32px; }
+.mais[hidden] { display: none; }
+
+/* ---------- Produtos (fundo escuro) ---------- */
+.produtos { background: var(--preto); color: var(--gesso); }
+.produtos .rotulo { color: var(--bronze-claro); }
+.produtos .cab-txt { color: #b5b9be; }
+.prod-grade {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(32px, 6vw, 96px); align-items: start;
+}
+.prod-lista { border-top: 1px solid var(--linha-esc); }
+.prod { border-bottom: 1px solid var(--linha-esc); }
+.prod-btn {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  width: 100%; padding: 22px 0; border: 0; background: none; cursor: pointer; text-align: left;
+  font-family: var(--f-titulo); font-stretch: 112%; font-weight: 500;
+  font-size: clamp(21px, 2.2vw, 30px); letter-spacing: -.015em; line-height: 1.1;
+  color: #7f848a; transition: color .3s;
+}
+.prod-btn::after {
+  content: ""; flex: none; width: 14px; height: 14px;
+  border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor;
+  transform: rotate(-45deg); transition: transform .4s var(--ease);
+}
+.prod-btn:hover, .prod.on .prod-btn { color: var(--gesso); }
+.prod.on .prod-btn::after { transform: rotate(45deg); }
+.prod-corpo { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .5s var(--ease); }
+.prod-corpo > div { overflow: hidden; }
+.prod.on .prod-corpo { grid-template-rows: 1fr; }
+.prod-corpo p { max-width: 46ch; color: #c3c6ca; font-size: 17px; }
+.orcar {
+  display: inline-flex; align-items: center; gap: 10px; margin: 16px 0 26px;
+  font-family: var(--f-titulo); font-weight: 600; font-size: 15px; text-decoration: none;
+  color: var(--gesso); border-bottom: 1px solid var(--bronze-claro); padding-bottom: 3px;
+}
+.orcar::after { content: "→"; transition: transform .3s var(--ease); }
+.orcar:hover { color: var(--bronze-claro); }
+.orcar:hover::after { transform: translateX(4px); }
+.prod-img-mob { display: none; }
+
+.prod-foto { position: sticky; top: 104px; }
+.prod-moldura {
+  position: relative; aspect-ratio: 4 / 5;
+  border: var(--moldura) solid var(--grafite); background: var(--grafite);
+  overflow: hidden; border-radius: 2px;
+}
+.prod-moldura img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  opacity: 0; transform: scale(1.04);
+  transition: opacity .7s, transform 1.4s cubic-bezier(.2, .7, .1, 1);
+}
+.prod-moldura img.on { opacity: 1; transform: none; }
+
+/* ---------- Empresa + como funciona ---------- */
+.empresa-topo {
+  display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 18px clamp(32px, 6vw, 96px); align-items: start;
+  padding-bottom: clamp(64px, 8vw, 120px);
+}
+.empresa-topo .rotulo { grid-column: 1 / -1; }
+.declaracao {
+  font-family: var(--f-texto); font-weight: 400; font-size: clamp(26px, 2.8vw, 40px);
+  line-height: 1.22; letter-spacing: -.012em;
+}
+.empresa-txt { color: #3d4044; padding-top: 8px; }
+
+.passos-titulo { margin: 0 0 clamp(36px, 4vw, 56px); }
+.passos {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  border-top: 2px solid var(--preto); /* o trilho */
+}
+.passos li { position: relative; padding: 30px 28px 0 0; }
+.passos li::before { /* a roldana correndo no trilho */
+  content: ""; position: absolute; top: -7px; left: 0;
+  width: 26px; height: 12px; background: var(--preto); border-radius: 1px;
+}
+.passo-n {
+  display: block; margin-bottom: 14px;
+  font-family: var(--f-titulo); font-stretch: 78%; font-weight: 600;
+  font-size: 12.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--bronze);
+}
+.passos p { margin-top: 10px; font-size: 17px; color: #3d4044; }
+.nota-arq {
+  margin-top: clamp(40px, 5vw, 64px); padding-top: 22px; border-top: 1px solid var(--linha);
+  font-size: 17px; color: #3d4044;
+}
+.nota-arq a { color: var(--preto); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.nota-arq a:hover { color: var(--bronze); }
+
+/* ---------- Perguntas (fundo escuro) ---------- */
+.faq { background: var(--preto); color: var(--gesso); }
+.faq .rotulo { color: var(--bronze-claro); }
+.faq-grade { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 32px clamp(32px, 6vw, 96px); }
+.faq-lista { border-top: 1px solid var(--linha-esc); }
+.faq details { border-bottom: 1px solid var(--linha-esc); }
+.faq summary {
+  display: flex; justify-content: space-between; align-items: center; gap: 20px;
+  padding: 22px 0; cursor: pointer; list-style: none;
+  font-family: var(--f-titulo); font-weight: 500; font-size: clamp(18px, 1.6vw, 21px); line-height: 1.3;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: ""; flex: none; width: 14px; height: 14px;
+  background: linear-gradient(currentColor, currentColor) center / 100% 1.5px no-repeat,
+              linear-gradient(currentColor, currentColor) center / 1.5px 100% no-repeat;
+  transition: transform .35s var(--ease);
+}
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { padding: 0 0 24px; max-width: 58ch; color: #c3c6ca; }
+
+/* ---------- Chamada final (seção branca) ---------- */
+.final .btn-claro { background: var(--preto); color: var(--gesso); }
+.final .btn-claro:hover { background: var(--bronze); }
+.final-grade {
+  display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr);
+  gap: 48px clamp(32px, 6vw, 96px); align-items: end;
+}
+.final h2 { font-size: clamp(34px, 5.4vw, 84px); }
+.final-txt { margin: 22px 0 32px; max-width: 40ch; color: #3d4044; font-size: 19px; }
+.contato {
+  display: grid; grid-template-columns: repeat(3, auto); justify-content: start;
+  gap: 24px clamp(28px, 4vw, 56px);
+  margin-top: clamp(48px, 6vw, 80px); padding-top: 26px; border-top: 1px solid var(--linha);
+}
+.contato dt {
+  font-family: var(--f-titulo); font-stretch: 78%; font-weight: 600; font-size: 12px;
+  letter-spacing: .18em; text-transform: uppercase; color: #5c6066; margin-bottom: 8px;
+}
+.contato dd { font-family: var(--f-titulo); font-size: 15px; line-height: 1.6; }
+.contato a { text-decoration: none; }
+.contato a:hover { color: var(--bronze); }
+.final-foto {
+  border: var(--moldura) solid var(--preto); background: var(--preto);
+  aspect-ratio: 3 / 4.4; overflow: hidden; border-radius: 2px;
+}
+.final-foto img { width: 100%; height: 100%; object-fit: cover; object-position: center 70%; }
+
+.rodape { background: var(--preto); color: #80858b; border-top: 1px solid var(--linha-esc); }
+.rodape-in {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px;
+  padding-block: 26px; font-family: var(--f-titulo); font-size: 13px;
+}
+
+/* ---------- Botão flutuante ---------- */
+.flutuante {
+  position: fixed; right: 20px; bottom: 20px; z-index: 60;
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 15px 20px 15px 17px; border-radius: 2px;
+  background: var(--zap); color: #fff; text-decoration: none;
+  font-family: var(--f-titulo); font-weight: 600; font-size: 15px;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, .45);
+  transform: translateY(160%); transition: transform .5s var(--ease), background-color .2s;
+}
+.flutuante:hover { background: #188a49; }
+.flutuante.ver { transform: none; }
+.flutuante .ic-zap { width: 20px; height: 20px; }
+
+/* ---------- Foto ampliada ---------- */
+.lupa {
+  position: fixed; inset: 0; z-index: 100;
+  display: grid; grid-template-rows: minmax(0, 1fr) auto;
+  background: #0c0d0e; color: var(--gesso);
+}
+.lupa[hidden] { display: none; }
+.lupa-palco { position: relative; display: flex; align-items: center; justify-content: center; padding: 64px 72px 16px; min-height: 0; }
+.lupa-palco img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+.lupa-fechar {
+  position: absolute; top: 14px; right: 18px; z-index: 2;
+  padding: 10px 4px; border: 0; background: none; cursor: pointer;
+  font-family: var(--f-titulo); font-stretch: 78%; font-weight: 600; font-size: 13px;
+  letter-spacing: .18em; text-transform: uppercase; color: var(--gesso);
+  border-bottom: 1px solid currentColor;
+}
+.lupa-seta {
+  position: absolute; top: 50%; translate: 0 -50%;
+  width: 52px; height: 52px; display: grid; place-items: center;
+  border: 1px solid #3a3d42; background: rgba(12, 13, 14, .6); border-radius: 2px; cursor: pointer; color: var(--gesso);
+}
+.lupa-seta:hover { border-color: var(--gesso); }
+.lupa-seta svg { width: 22px; height: 22px; }
+.lupa-seta.ant { left: 12px; }
+.lupa-seta.prox { right: 12px; }
+.lupa-barra {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px 24px;
+  padding: 16px clamp(16px, 4vw, 40px) calc(18px + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--linha-esc);
+  font-family: var(--f-titulo); font-size: 15px;
+}
+.lupa-cont { color: var(--aluminio); margin-left: 10px; }
+
+/* ---------- Telas médias ---------- */
+@media (max-width: 1080px) {
+  .menu { display: none; }
+  .hero-topo { grid-template-columns: 1fr; align-items: start; }
+  .hero-lado { max-width: 620px; }
+  .fatos { grid-template-columns: repeat(2, 1fr); }
+  .fatos li:nth-child(3) { padding-left: 0; border-left: 0; }
+  .fatos li:nth-child(n+3) { border-top: 1px solid var(--linha-esc); }
+  .cab { grid-template-columns: 1fr; }
+  .filtros { justify-content: flex-start; max-width: none; }
+}
+
+/* ---------- Celular ---------- */
+@media (max-width: 759px) {
+  :root { --moldura: 7px; --montante: 6px; }
+  body { font-size: 17px; }
+  .topo-in { height: 72px; }
+  .simbolo { width: 44px; height: 44px; }
+  .marca { gap: 10px; }
+  .marca-nome { font-size: 17px; }
+  .marca-sub { font-size: 10px; letter-spacing: .16em; }
+  .btn-topo { padding: 10px 14px; font-size: 14px; }
+  .so-desk { display: none; }
+  .so-mob { display: inline; }
+
+  .hero { padding-top: 100px; }
+  /* No celular as fotos sobem para logo depois do título */
+  .hero .wrap { display: flex; flex-direction: column; }
+  .hero-topo { display: contents; }
+  .hero-topo > div:first-child { order: 1; margin-bottom: 24px; }
+  .caixilho { order: 2; }
+  .hero-lado { order: 3; margin-top: 24px; }
+  .fatos { order: 4; margin-top: 28px; border-top: 1px solid var(--linha-esc); }
+  .hero .rotulo { text-wrap: balance; }
+  h1 { font-size: clamp(34px, 10.4vw, 56px); }
+  h1 em { white-space: nowrap; }
+  .acoes .btn { width: 100%; justify-content: center; }
+  .caixilho { height: 54svh; min-height: 340px; }
+  .folha:nth-child(n+3) { display: none; }
+  .folha figcaption { opacity: 1; transform: none; font-size: 10.5px; letter-spacing: .1em; padding: 7px 9px 6px; white-space: normal; right: 0; }
+  .fatos li { font-size: 14px; padding-block: 16px; }
+
+  .muro { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 27vw; }
+  .obra.L, .obra.M { grid-column: span 2; grid-row: span 3; }
+  .obra.T { grid-column: span 1; grid-row: span 4; }
+  .obra.S { grid-column: span 1; grid-row: span 4; }
+  .muro.filtrando .obra { grid-column: span 1; grid-row: span 4; }
+  .obra figcaption { display: none; }
+
+  .prod-grade { grid-template-columns: 1fr; }
+  .prod-foto { display: none; }
+  .prod-img-mob {
+    display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+    border: var(--moldura) solid var(--grafite); margin-bottom: 18px; border-radius: 2px;
+  }
+
+  .empresa-topo { grid-template-columns: 1fr; }
+  .passos { grid-template-columns: 1fr; border-top: 0; border-left: 2px solid var(--preto); margin-left: 6px; }
+  .passos li { padding: 0 0 34px 28px; }
+  .passos li:last-child { padding-bottom: 0; }
+  .passos li::before { top: 0; left: -7px; width: 12px; height: 26px; }
+
+  .faq-grade { grid-template-columns: 1fr; }
+  .final-grade { grid-template-columns: 1fr; }
+  .final .btn-grande { width: 100%; justify-content: center; }
+  .contato { grid-template-columns: 1fr; }
+  .final-foto { aspect-ratio: 4 / 5; }
+  .rodape-in { padding-bottom: 96px; }
+
+  .flutuante { left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); justify-content: center; padding-block: 16px; }
+
+  .lupa-palco { padding: 56px 0 8px; }
+  .lupa-seta { display: none; }
+  .lupa-barra .btn { width: 100%; justify-content: center; }
+}
+
+/* Quem pediu menos movimento no aparelho não vê animação */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+  .caixilho.entrando .folha { transform: none; }
+}
+
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Alumideal Esquadrias de Alumínio",
+  "legalName": "Alumideal Esquadrias de Alumínio Ltda",
+  "taxID": "48.133.240/0001-90",
+  "telephone": "+55 11 91943-5339",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Alberto Diniz, 1017, Barracão 4",
+    "addressLocality": "Bragança Paulista",
+    "addressRegion": "SP",
+    "postalCode": "12902-360",
+    "addressCountry": "BR"
+  },
+  "areaServed": "Bragança Paulista e região",
+  "sameAs": ["https://www.instagram.com/alumidealesquadrias/"]
+}
+</script>
+</head>
+<body>
+
+<!-- ============ TOPO ============ -->
+<header class="topo" id="topo">
+  <div class="wrap topo-in">
+    <a class="marca" href="#inicio" aria-label="Alumideal, voltar ao início">
+      <img class="simbolo" src="logo.png" width="384" height="384" alt="">
+      <span class="marca-txt">
+        <span class="marca-nome">Alumideal</span>
+        <span class="marca-sub">Esquadrias de alumínio</span>
+      </span>
+    </a>
+    <nav class="menu" aria-label="Seções">
+      <a href="#obras">Obras</a>
+      <a href="#produtos">O que fabricamos</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn btn-topo" href="https://wa.me/5511919435339" data-zap="Olá! Vim pelo site da Alumideal e quero um orçamento.">
+      <svg class="ic-zap" viewBox="0 0 24 24" aria-hidden="true"><use href="#zap"/></svg>
+      <span class="so-desk">Pedir orçamento</span><span class="so-mob">Orçamento</span>
+    </a>
+  </div>
+</header>
+
+<main id="inicio">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-topo">
+      <div>
+        <p class="rotulo">Fábrica em Bragança Paulista · 15 anos no ramo</p>
+        <h1>Esquadrias de<br> alumínio <em>sob medida</em></h1>
+      </div>
+      <div class="hero-lado">
+        <p>Portas pivotantes, portas e janelas de correr, fachadas de vidro, guarda-corpos, coberturas e brises. Medidos na sua obra, fabricados em Bragança Paulista e instalados pela nossa equipe.</p>
+        <div class="acoes">
+          <a class="btn" href="https://wa.me/5511919435339" data-zap="Olá! Vim pelo site da Alumideal e quero um orçamento.">
+            <svg class="ic-zap" viewBox="0 0 24 24" aria-hidden="true"><use href="#zap"/></svg>
+            Pedir orçamento no WhatsApp
+          </a>
+          <a class="link-linha" href="#obras">Ver obras</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Caixilho: as fotos entram como folhas de uma porta de correr -->
+    <div class="caixilho" id="caixilho">
+      <figure class="folha" style="--i:0">
+        <img src="o/pivotante-pele-de-vidro.webp" width="540" height="960" alt="Porta pivotante em ACM preto ao lado de fachada de vidro do chão ao teto, ao entardecer" fetchpriority="high">
+        <figcaption>Porta pivotante em ACM e fachada de vidro</figcaption>
+      </figure>
+      <figure class="folha" style="--i:1">
+        <img src="o/fachada-vidro-canto.webp" width="720" height="960" alt="Casa com caixilho de vidro de pé-direito duplo no canto da fachada" fetchpriority="high">
+        <figcaption>Caixilho de vidro em pé-direito duplo</figcaption>
+      </figure>
+      <figure class="folha" style="--i:2">
+        <img src="o/pivotante-guarda-corpo.webp" width="720" height="960" alt="Entrada com porta pivotante amadeirada e guarda-corpo de vidro no andar de cima">
+        <figcaption>Porta pivotante e guarda-corpo</figcaption>
+      </figure>
+      <figure class="folha" style="--i:3">
+        <img src="o/brises-madeira-fachada.webp" width="540" height="960" alt="Sobrado com brise e janela camarão ripado amadeirado no andar de cima">
+        <figcaption>Brise e janela camarão ripado</figcaption>
+      </figure>
+    </div>
+
+    <ul class="fatos">
+      <li>15 anos no ramo de esquadrias</li>
+      <li>Fábrica própria em Bragança Paulista</li>
+      <li>Medição, fabricação e instalação</li>
+      <li>Atendemos Bragança Paulista e região</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ OBRAS ============ -->
+<section class="secao obras" id="obras">
+  <div class="wrap">
+    <div class="cab">
+      <div>
+        <p class="rotulo">Obras entregues</p>
+        <h2>Obras recentes</h2>
+        <p class="cab-txt">Casas e empresas atendidas pela Alumideal. Toque numa foto para ver em tela cheia.</p>
+      </div>
+      <div class="filtros" role="group" aria-label="Filtrar obras por tipo">
+        <button class="filtro on" data-f="todas" aria-pressed="true">Todas</button>
+        <button class="filtro" data-f="portas" aria-pressed="false">Portas pivotantes</button>
+        <button class="filtro" data-f="correr" aria-pressed="false">Correr</button>
+        <button class="filtro" data-f="vidro" aria-pressed="false">Vidro</button>
+        <button class="filtro" data-f="brises" aria-pressed="false">Brises</button>
+        <button class="filtro" data-f="comercial" aria-pressed="false">Comercial</button>
+      </div>
+    </div>
+
+    <div class="muro" id="muro">
+      <!-- L = horizontal grande · T = vertical alta · M = horizontal média · S = vertical pequena. As marcadas "extra" aparecem em "Ver todas" -->
+      <figure class="obra L" data-cat="brises">
+        <button type="button"><img src="o/brises-terraco.webp" width="960" height="720" alt="Painéis de brise amadeirados ao longo de um terraço" loading="lazy" decoding="async"></button>
+        <figcaption>Painéis de brise no terraço</figcaption>
+      </figure>
+      <figure class="obra T" data-cat="portas">
+        <button type="button"><img src="o/pivotante-preta-corten.webp" width="720" height="960" alt="Porta pivotante com fechamento em ACM preto, ao lado de revestimento cor de ferrugem" loading="lazy" decoding="async"></button>
+        <figcaption>Porta pivotante com fechamento em ACM</figcaption>
+      </figure>
+      <figure class="obra S" data-cat="vidro">
+        <button type="button"><img src="o/guarda-corpo-escada.webp" width="540" height="960" alt="Guarda-corpo de vidro no mezanino e janela alta ao lado da escada" loading="lazy" decoding="async"></button>
+        <figcaption>Guarda-corpo de vidro e janela alta</figcaption>
+      </figure>
+      <figure class="obra S" data-cat="comercial vidro">
+        <button type="button"><img src="o/fachada-comercial.webp" width="720" height="960" alt="Fechamento de fachada em pele de vidro com janelas maxim-ar" loading="lazy" decoding="async"></button>
+        <figcaption>Fechamento de fachada em pele de vidro</figcaption>
+      </figure>
+      <figure class="obra M" data-cat="vidro">
+        <button type="button"><img src="o/cobertura-vidro-spa.webp" width="960" height="720" alt="Cobertura e fechamento de vidro sobre área com spa de madeira" loading="lazy" decoding="async"></button>
+        <figcaption>Cobertura e fechamento de vidro</figcaption>
+      </figure>
+      <figure class="obra M" data-cat="correr">
+        <button type="button"><img src="o/correr-preto-sala.webp" width="960" height="720" alt="Sequência de portas de correr pretas do piso ao teto em sala ampla" loading="lazy" decoding="async"></button>
+        <figcaption>Portas de correr do piso ao teto</figcaption>
+      </figure>
+      <figure class="obra M" data-cat="brises">
+        <button type="button"><img src="o/brises-moveis.webp" width="960" height="720" alt="Brises móveis abertos diante de janela em fachada longa" loading="lazy" decoding="async"></button>
+        <figcaption>Brises móveis na fachada</figcaption>
+      </figure>
+      <figure class="obra T" data-cat="portas vidro">
+        <button type="button"><img src="o/pivotante-pele-de-vidro.webp" width="540" height="960" alt="Porta pivotante em ACM preto ao lado de fachada de vidro iluminada" loading="lazy" decoding="async"></button>
+        <figcaption>Porta pivotante em ACM e fachada de vidro</figcaption>
+      </figure>
+      <figure class="obra L" data-cat="correr vidro">
+        <button type="button"><img src="o/correr-cobertura-tijolo.webp" width="960" height="720" alt="Portas de correr pretas em parede de tijolo e cobertura de vidro ao fundo" loading="lazy" decoding="async"></button>
+        <figcaption>Portas de correr e cobertura de vidro</figcaption>
+      </figure>
+      <figure class="obra S extra" data-cat="vidro">
+        <button type="button"><img src="o/fachada-vidro-canto.webp" width="720" height="960" alt="Caixilho de vidro de pé-direito duplo no canto da casa" loading="lazy" decoding="async"></button>
+        <figcaption>Caixilho de vidro no canto da casa</figcaption>
+      </figure>
+      <figure class="obra S extra" data-cat="brises">
+        <button type="button"><img src="o/brises-madeira-fachada.webp" width="540" height="960" alt="Sobrado com brise e janela camarão ripado amadeirado, aberto" loading="lazy" decoding="async"></button>
+        <figcaption>Brise e janela camarão ripado</figcaption>
+      </figure>
+      <figure class="obra M extra" data-cat="comercial vidro">
+        <button type="button"><img src="o/divisoria-vidro-comercial.webp" width="960" height="720" alt="Fechamento de vidro fumê com janelas maxim-ar em salão comercial" loading="lazy" decoding="async"></button>
+        <figcaption>Fechamento de vidro em salão comercial</figcaption>
+      </figure>
+      <figure class="obra S extra" data-cat="portas">
+        <button type="button"><img src="o/pivotante-arco.webp" width="562" height="960" alt="Porta pivotante clara com bandeira de vidro em arco" loading="lazy" decoding="async"></button>
+        <figcaption>Porta pivotante com bandeira em arco</figcaption>
+      </figure>
+      <figure class="obra S extra" data-cat="correr">
+        <button type="button"><img src="o/correr-varanda-vista.webp" width="720" height="960" alt="Portas de correr abertas para a varanda com vista para o campo" loading="lazy" decoding="async"></button>
+        <figcaption>Portas de correr na varanda</figcaption>
+      </figure>
+      <figure class="obra S extra" data-cat="brises">
+        <button type="button"><img src="o/brises-madeira-jardim.webp" width="540" height="960" alt="Brise e janela camarão ripado amadeirado e janelas de correr, vistos do jardim" loading="lazy" decoding="async"></button>
+        <figcaption>Brise e janela camarão ripado, vista do jardim</figcaption>
+      </figure>
+      <figure class="obra S extra" data-cat="portas vidro">
+        <button type="button"><img src="o/pivotante-guarda-corpo.webp" width="720" height="960" alt="Porta pivotante amadeirada com guarda-corpo de vidro acima" loading="lazy" decoding="async"></button>
+        <figcaption>Porta pivotante e guarda-corpo</figcaption>
+      </figure>
+    </div>
+
+    <div class="mais">
+      <button type="button" class="link-linha" id="verTodas">Ver todas as 16 obras</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODUTOS ============ -->
+<section class="secao produtos" id="produtos">
+  <div class="wrap">
+    <div class="cab">
+      <div>
+        <p class="rotulo">Produtos</p>
+        <h2>O que a Alumideal fabrica</h2>
+      </div>
+      <p class="cab-txt">Cada linha abre o WhatsApp com a mensagem pronta. É só completar com a medida ou mandar a foto do vão. Sem a medida, agendamos a medição no local.</p>
+    </div>
+
+    <div class="prod-grade">
+      <ul class="prod-lista" id="prodLista">
+        <li class="prod on" data-foto="0">
+          <button type="button" class="prod-btn" aria-expanded="true">Portas pivotantes</button>
+          <div class="prod-corpo"><div>
+            <img class="prod-img-mob" src="o/pivotante-preta-corten.webp" width="720" height="960" alt="" loading="lazy">
+            <p>Portas de entrada de grande altura, que giram sobre um eixo, com fechamento em ACM. Feitas na medida do vão, com puxador e acabamento definidos com você.</p>
+            <a class="orcar" href="https://wa.me/5511919435339" data-zap="Olá! Vim pelo site da Alumideal e quero um orçamento de porta pivotante.">Orçar porta pivotante</a>
+          </div></div>
+        </li>
+        <li class="prod" data-foto="1">
+          <button type="button" class="prod-btn" aria-expanded="false">Portas e janelas de correr</button>
+          <div class="prod-corpo"><div>
+            <img class="prod-img-mob" src="o/correr-preto-sala.webp" width="960" height="720" alt="" loading="lazy">
+            <p>Folhas de correr para vãos grandes, que abrem a sala para a varanda e o jardim. Vidro do piso ao teto e perfil discreto.</p>
+            <a class="orcar" href="https://wa.me/5511919435339" data-zap="Olá! Vim pelo site da Alumideal e quero um orçamento de portas ou janelas de correr.">Orçar portas e janelas de correr</a>
+          </div></div>
+        </li>
+        <li class="prod" data-foto="2">
+          <button type="button" class="prod-btn" aria-expanded="false">Fachadas de vidro</button>
+          <div class="prod-corpo"><div>
+            <img class="prod-img-mob" src="o/fachada-vidro-canto.webp" width="720" height="960" alt="" loading="lazy">
+            <p>Fechamento de fachada em pele de vidro e caixilhos fixos de pé-direito duplo para fachadas, escadas e salas.</p>
+            <a class="orcar" href="https://wa.me/5511919435339" data-zap="Olá! Vim pelo site da Alumideal e quero um orçamento de fachada de vidro.">Orçar fachada de vidro</a>
+          </div></div>
+        </li>
+        <li class="prod" data-foto="3">
+          <button type="button" class="prod-btn" aria-expanded="false">Guarda-corpos</button>
+          <div class="prod-corpo"><div>
+            <img class="prod-img-mob" src="o/guarda-corpo-escada.webp" width="540" height="960" alt="" loading="lazy">
+            <p>Vidro com fixação em alumínio para escadas, mezaninos, sacadas e terraços.</p>
+            <a class="orcar" href="https://wa.me/5511919435339" data-zap="Olá! Vim pelo site da Alumideal e quero um orçamento de guarda-corpo.">Orçar guarda-corpo</a>
+          </div></div>
+        </li>
+        <li class="prod" data-foto="4">
+          <button type="button" class="prod-btn" aria-expanded="false">Coberturas de vidro</button>
+          <div class="prod-corpo"><div>
+            <img class="prod-img-mob" src="o/cobertura-vidro-spa.webp" width="960" height="720" alt="" loading="lazy">
+            <p>Estrutura de alumínio com vidro para varandas, áreas gourmet e spa. Protege da chuva sem tirar a luz do ambiente.</p>
+            <a class="orcar" href="https://wa.me/5511919435339" data-zap="Olá! Vim pelo site da Alumideal e quero um orçamento de cobertura de vidro.">Orçar cobertura de vidro</a>
+          </div></div>
+        </li>
+        <li class="prod" data-foto="5">
+          <button type="button" class="prod-btn" aria-expanded="false">Brises</button>
+          <div class="prod-corpo"><div>
+            <img class="prod-img-mob" src="o/brises-terraco.webp" width="960" height="720" alt="" loading="lazy">
+            <p>Brises e janelas camarão ripadas, fixas ou móveis, que filtram o sol e dão privacidade sem fechar a fachada.</p>
+            <a class="orcar" href="https://wa.me/5511919435339" data-zap="Olá! Vim pelo site da Alumideal e quero um orçamento de brises.">Orçar brises</a>
+          </div></div>
+        </li>
+        <li class="prod" data-foto="6">
+          <button type="button" class="prod-btn" aria-expanded="false">Obras comerciais</button>
+          <div class="prod-corpo"><div>
+            <img class="prod-img-mob" src="o/fachada-comercial.webp" width="720" height="960" alt="" loading="lazy">
+            <p>Fachadas de vidro, vitrines e fechamentos para lojas, escritórios e galpões.</p>
+            <a class="orcar" href="https://wa.me/5511919435339" data-zap="Olá! Vim pelo site da Alumideal e quero um orçamento para uma obra comercial.">Orçar obra comercial</a>
+          </div></div>
+        </li>
+      </ul>
+
+      <div class="prod-foto" aria-hidden="true">
+        <div class="prod-moldura" id="prodFotos">
+          <img class="on" src="o/pivotante-preta-corten.webp" width="1500" height="2000" alt="" loading="lazy">
+          <img src="o/correr-preto-sala.webp" width="2000" height="1500" alt="" loading="lazy">
+          <img src="o/fachada-vidro-canto.webp" width="1200" height="1600" alt="" loading="lazy">
+          <img src="o/guarda-corpo-escada.webp" width="900" height="1600" alt="" loading="lazy">
+          <img src="o/cobertura-vidro-spa.webp" width="2000" height="1500" alt="" loading="lazy">
+          <img src="o/brises-terraco.webp" width="2000" height="1500" alt="" loading="lazy">
+          <img src="o/fachada-comercial.webp" width="1500" height="2000" alt="" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EMPRESA + COMO FUNCIONA ============ -->
+<section class="secao empresa" id="como-funciona">
+  <div class="wrap">
+    <div class="empresa-topo">
+      <p class="rotulo">A empresa</p>
+      <p class="declaracao">A Alumideal mede, fabrica e instala. Do orçamento à entrega, você fala com a mesma equipe.</p>
+      <p class="empresa-txt">São 15 anos no ramo de esquadrias de alumínio. A fábrica fica na Av. Alberto Diniz, em Bragança Paulista, e atende casas e empresas da cidade e da região. Cada peça é cortada e montada para o vão da sua obra, depois de medida no local.</p>
+    </div>
+
+    <h2 class="passos-titulo">Como funciona o orçamento</h2>
+    <ol class="passos">
+      <li>
+        <span class="passo-n">Passo 1</span>
+        <h3>Mande o que você tem</h3>
+        <p>Planta, projeto do arquiteto ou foto do vão, com a medida se você tiver. Tudo pelo WhatsApp.</p>
+      </li>
+      <li>
+        <span class="passo-n">Passo 2</span>
+        <h3>Medição in loco</h3>
+        <p>Nem sempre o cliente tem a medida. Quando precisa, agendamos uma visita para medir no local e fazer o orçamento.</p>
+      </li>
+      <li>
+        <span class="passo-n">Passo 3</span>
+        <h3>Orçamento por item</h3>
+        <p>Cada peça descrita com perfil, vidro, acabamento e valor.</p>
+      </li>
+      <li>
+        <span class="passo-n">Passo 4</span>
+        <h3>Fabricação e instalação</h3>
+        <p>Antes de fabricar, a equipe confere as medidas na obra. As peças são feitas na fábrica em Bragança Paulista e instaladas por nós.</p>
+      </li>
+    </ol>
+    <p class="nota-arq">É arquiteto ou construtora? <a href="https://wa.me/5511919435339" data-zap="Olá! Sou arquiteto(a) / construtora e quero enviar um projeto para orçamento de esquadrias.">Envie o projeto completo</a> e orçamos todas as esquadrias de uma vez.</p>
+  </div>
+</section>
+
+<!-- ============ PERGUNTAS ============ -->
+<section class="secao faq">
+  <div class="wrap faq-grade">
+    <div>
+      <p class="rotulo">Dúvidas</p>
+      <h2>Perguntas frequentes</h2>
+    </div>
+    <div class="faq-lista">
+      <details>
+        <summary>Vocês atendem a minha cidade?</summary>
+        <p>Atendemos Bragança Paulista e as cidades da região. Mande o endereço da obra pelo WhatsApp e confirmamos.</p>
+      </details>
+      <details>
+        <summary>Preciso ter projeto de arquiteto para pedir orçamento?</summary>
+        <p>Não. Uma foto do vão com a medida aproximada já serve para uma primeira estimativa. O valor final sai depois da medição no local.</p>
+      </details>
+      <details>
+        <summary>Não tenho a medida do vão. Como faço o orçamento?</summary>
+        <p>Sem problema. Agendamos uma visita para medir in loco e, com as medidas, fazemos o orçamento. É só chamar no WhatsApp com o endereço da obra.</p>
+      </details>
+      <details>
+        <summary>Qual é o prazo de entrega?</summary>
+        <p>Depende da quantidade de peças e do tipo de vidro. O prazo vem escrito no orçamento, junto com o valor.</p>
+      </details>
+      <details>
+        <summary>Vocês fazem obra comercial?</summary>
+        <p>Sim. Fachadas de vidro, vitrines e fechamentos para lojas, escritórios e galpões.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAMADA FINAL + CONTATO ============ -->
+<section class="secao final" id="contato">
+  <div class="wrap final-grade">
+    <div>
+      <p class="rotulo">Orçamento</p>
+      <h2>Tem uma obra em andamento?</h2>
+      <p class="final-txt">Mande a planta, o projeto ou uma foto do vão. Sem a medida? Agendamos a medição no local.</p>
+      <a class="btn btn-claro btn-grande" href="https://wa.me/5511919435339" data-zap="Olá! Vim pelo site da Alumideal e quero um orçamento.">
+        <svg class="ic-zap" viewBox="0 0 24 24" aria-hidden="true"><use href="#zap"/></svg>
+        Pedir orçamento no WhatsApp
+      </a>
+
+      <dl class="contato">
+        <div>
+          <dt>WhatsApp</dt>
+          <dd>
+            <a href="https://wa.me/5511919435339" data-zap="Olá! Vim pelo site da Alumideal e quero um orçamento.">(11) 91943-5339</a><br>
+            <a href="https://wa.me/5511913582915" data-zap="Olá! Vim pelo site da Alumideal e quero um orçamento." data-num="5511913582915">(11) 91358-2915</a>
+          </dd>
+        </div>
+        <div>
+          <dt>Fábrica</dt>
+          <dd>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Alberto%20Diniz%2C%201017%2C%20Bragan%C3%A7a%20Paulista%20SP" target="_blank" rel="noopener">Av. Alberto Diniz, 1017, Barracão 4<br>Jd. Estância Santana, Bragança Paulista, SP</a>
+          </dd>
+        </div>
+        <div>
+          <dt>Instagram</dt>
+          <dd><a href="https://www.instagram.com/alumidealesquadrias/" target="_blank" rel="noopener">@alumidealesquadrias</a></dd>
+        </div>
+      </dl>
+    </div>
+    <figure class="final-foto">
+      <img src="o/brises-madeira-jardim.webp" width="540" height="960" alt="Sobrado com brise e janela camarão ripado e janelas de correr entre as palmeiras do jardim" loading="lazy" decoding="async">
+    </figure>
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <div class="wrap rodape-in">
+    <span>Alumideal Esquadrias de Alumínio Ltda · CNPJ 48.133.240/0001-90</span>
+    <span>Bragança Paulista, SP · 2026</span>
+  </div>
+</footer>
+
+<!-- Botão que acompanha a rolagem -->
+<a class="flutuante" id="flutuante" href="https://wa.me/5511919435339" data-zap="Olá! Vim pelo site da Alumideal e quero um orçamento." aria-label="Pedir orçamento no WhatsApp">
+  <svg class="ic-zap" viewBox="0 0 24 24" aria-hidden="true"><use href="#zap"/></svg>
+  <span>Orçamento no WhatsApp</span>
+</a>
+
+<!-- Foto ampliada -->
+<div class="lupa" id="lupa" role="dialog" aria-modal="true" aria-label="Foto ampliada" hidden>
+  <button type="button" class="lupa-fechar" id="lupaFechar" aria-label="Fechar">Fechar</button>
+  <div class="lupa-palco">
+    <button type="button" class="lupa-seta ant" id="lupaAnt" aria-label="Foto anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+    <img id="lupaImg" alt="">
+    <button type="button" class="lupa-seta prox" id="lupaProx" aria-label="Próxima foto"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+  </div>
+  <div class="lupa-barra">
+    <p><span id="lupaLeg"></span> <span class="lupa-cont" id="lupaCont"></span></p>
+    <a class="btn btn-claro" id="lupaZap" href="https://wa.me/5511919435339" target="_blank" rel="noopener">
+      <svg class="ic-zap" viewBox="0 0 24 24" aria-hidden="true"><use href="#zap"/></svg>
+      Quero um orçamento parecido
+    </a>
+  </div>
+</div>
+
+<!-- Ícone do WhatsApp, usado em todos os botões -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="zap" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12.04 2C6.57 2 2.13 6.43 2.13 11.9c0 1.75.46 3.45 1.33 4.95L2.05 22l5.27-1.38a9.9 9.9 0 0 0 4.72 1.2h.01c5.46 0 9.9-4.44 9.9-9.9A9.86 9.86 0 0 0 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.13.82.84-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 8.24 8.25c0 4.55-3.7 8.24-8.24 8.24zm4.52-6.17c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.12-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.42h-.48c-.16 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.21.88 2.39 1.01 2.55.12.17 1.74 2.65 4.21 3.72.59.25 1.05.41 1.4.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29z"/>
+  </symbol>
+</svg>
+
+<script>
+/* =========================================================
+   ALUMIDEAL · script da landing page
+   ========================================================= */
+
+/* ---- 1. CONFIGURAÇÃO (mexa só aqui) ---- */
+const ZAP = "5511919435339";  // WhatsApp principal: 55 + DDD + número, só dígitos
+const MSG_PADRAO = "Olá! Vim pelo site da Alumideal e quero um orçamento.";
+
+const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+const linkZap = (msg, num = ZAP) => "https://wa.me/" + num + "?text=" + encodeURIComponent(msg);
+const poucoMovimento = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ---- 2. Todos os botões de WhatsApp, cada um com a sua mensagem ---- */
+$$("[data-zap]").forEach(a => {
+  a.href = linkZap(a.dataset.zap || MSG_PADRAO, a.dataset.num || ZAP);
+  a.target = "_blank";
+  a.rel = "noopener";
+});
+
+/* ---- 3. Topo ganha fundo depois que a página rola ---- */
+const topo = $("#topo");
+const marcarTopo = () => topo.classList.toggle("rolou", scrollY > 24);
+marcarTopo();
+addEventListener("scroll", marcarTopo, { passive: true });
+
+/* ---- 4. Abertura do caixilho: as folhas correm como porta de correr ---- */
+const caixilho = $("#caixilho");
+if (caixilho && !poucoMovimento) {
+  caixilho.classList.add("entrando");
+  const primeiras = $$("img", caixilho).slice(0, 2).map(img => img.decode().catch(() => {}));
+  const espera = new Promise(r => setTimeout(r, 900));
+  Promise.race([Promise.all(primeiras), espera]).then(() => {
+    requestAnimationFrame(() => caixilho.classList.add("aberto"));
+    setTimeout(() => caixilho.classList.remove("entrando", "aberto"), 2200);
+  });
+}
+
+/* ---- 5. Obras: filtro e "ver todas" ---- */
+const muro = $("#muro");
+const obras = $$(".obra", muro);
+const verTodas = $("#verTodas");
+const blocoMais = verTodas.closest(".mais");
+
+verTodas.addEventListener("click", () => {
+  muro.classList.add("tudo");
+  blocoMais.hidden = true;
+});
+
+$$(".filtro").forEach(btn => btn.addEventListener("click", () => {
+  $$(".filtro").forEach(b => { b.classList.remove("on"); b.setAttribute("aria-pressed", "false"); });
+  btn.classList.add("on");
+  btn.setAttribute("aria-pressed", "true");
+  const f = btn.dataset.f;
+  if (f === "todas") {
+    muro.classList.remove("filtrando");
+    obras.forEach(o => o.classList.remove("esc"));
+    blocoMais.hidden = muro.classList.contains("tudo");
+  } else {
+    muro.classList.add("filtrando");
+    obras.forEach(o => o.classList.toggle("esc", !o.dataset.cat.split(" ").includes(f)));
+    blocoMais.hidden = true;
+  }
+}));
+
+/* ---- 6. Foto ampliada, com botão de orçamento ---- */
+const lupa = $("#lupa"), lupaImg = $("#lupaImg"), lupaLeg = $("#lupaLeg"), lupaCont = $("#lupaCont"), lupaZap = $("#lupaZap");
+let lista = [], atual = 0, origem = null;
+
+function mostrar(i) {
+  atual = (i + lista.length) % lista.length;
+  const fig = lista[atual];
+  const img = $("img", fig);
+  const leg = $("figcaption", fig).textContent.trim();
+  lupaImg.src = img.currentSrc.replace("-p.jpg", "-g.jpg") || img.src;
+  lupaImg.alt = img.alt;
+  lupaLeg.textContent = leg;
+  lupaCont.textContent = (atual + 1) + " de " + lista.length;
+  lupaZap.href = linkZap("Olá! Vi no site da Alumideal a obra \"" + leg + "\" e quero um orçamento parecido.");
+}
+function abrir(fig) {
+  lista = obras.filter(o => o.offsetParent !== null);
+  origem = $("button", fig);
+  mostrar(lista.indexOf(fig));
+  lupa.hidden = false;
+  document.body.style.overflow = "hidden";
+  $("#lupaFechar").focus();
+}
+function fechar() {
+  lupa.hidden = true;
+  lupaImg.removeAttribute("src");
+  document.body.style.overflow = "";
+  origem && origem.focus();
+}
+obras.forEach(fig => $("button", fig).addEventListener("click", () => abrir(fig)));
+$("#lupaFechar").addEventListener("click", fechar);
+$("#lupaAnt").addEventListener("click", () => mostrar(atual - 1));
+$("#lupaProx").addEventListener("click", () => mostrar(atual + 1));
+addEventListener("keydown", e => {
+  if (lupa.hidden) return;
+  if (e.key === "Escape") fechar();
+  if (e.key === "ArrowLeft") mostrar(atual - 1);
+  if (e.key === "ArrowRight") mostrar(atual + 1);
+});
+let toqueX = null;
+lupa.addEventListener("touchstart", e => { toqueX = e.touches[0].clientX; }, { passive: true });
+lupa.addEventListener("touchend", e => {
+  if (toqueX === null) return;
+  const dx = e.changedTouches[0].clientX - toqueX;
+  if (Math.abs(dx) > 50) mostrar(atual + (dx < 0 ? 1 : -1));
+  toqueX = null;
+});
+$(".lupa-palco").addEventListener("click", e => { if (e.target.classList.contains("lupa-palco")) fechar(); });
+
+/* ---- 7. Produtos: escolher a linha troca a foto (computador) ou abre o item (celular) ---- */
+const prods = $$(".prod");
+const fotosProd = $$("#prodFotos img");
+const telaGrande = matchMedia("(min-width: 760px)");
+
+function ativar(prod) {
+  prods.forEach(p => {
+    const on = p === prod;
+    p.classList.toggle("on", on);
+    $(".prod-btn", p).setAttribute("aria-expanded", on);
+  });
+  const n = +prod.dataset.foto;
+  fotosProd.forEach((img, i) => img.classList.toggle("on", i === n));
+}
+prods.forEach(p => {
+  const btn = $(".prod-btn", p);
+  btn.addEventListener("click", () => {
+    if (!telaGrande.matches && p.classList.contains("on")) {
+      p.classList.remove("on");
+      btn.setAttribute("aria-expanded", "false");
+      return;
+    }
+    ativar(p);
+  });
+  btn.addEventListener("mouseenter", () => { if (telaGrande.matches) ativar(p); });
+  btn.addEventListener("focus", () => { if (telaGrande.matches) ativar(p); });
+});
+
+/* ---- 8. Botão flutuante: aparece depois do topo e some na chamada final ---- */
+const flutuante = $("#flutuante");
+const visivel = new Map();
+const obs = new IntersectionObserver(entradas => {
+  entradas.forEach(e => visivel.set(e.target, e.isIntersecting));
+  const hero = visivel.get($(".hero")), final = visivel.get($("#contato"));
+  flutuante.classList.toggle("ver", !hero && !final);
+}, { threshold: 0.05 });
+obs.observe($(".hero"));
+obs.observe($("#contato"));
+
+</script>
+</body>
+</html>
